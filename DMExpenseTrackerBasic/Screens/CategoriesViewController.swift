@@ -9,6 +9,9 @@ import UIKit
 
 class CategoriesViewController: UIViewController {
     
+    var expenses = DataController.getExpenses()
+    var expensesByCategory: [String: [Expense]] = [:] //Where does Expense come from???
+    
     func initializeExpenseData() {
         
     }
