@@ -37,8 +37,10 @@ class ExpensesViewController: UIViewController,UITableViewDelegate, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "categoryExpenses", for: indexPath) as! ExpenseCell
         let expense = expenses[indexPath.row]
         
+        let ammount = String(format: "%.2f", expense.amount)
+        
         cell.titleLabel?.text = expense.title
-        cell.paymentLabel?.text = "\(expense.amount)"
+        cell.paymentLabel?.text = "$\(ammount)"
         
 //        let name = expenses[indexPath.row].title
 //        var config = cell.defaultContentConfiguration()
