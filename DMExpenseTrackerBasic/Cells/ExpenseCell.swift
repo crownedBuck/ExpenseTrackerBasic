@@ -9,8 +9,14 @@ import UIKit
 
 class ExpenseCell: UITableViewCell {
     
-//    func set(expense: Expense) {
-//
-//    }
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var paymentLabel: UILabel!
+    
+    
+    func set(expense: Expense) {
+        print("cell is called")
+        titleLabel.text = expense.title
+        paymentLabel.text = "\(expense.amount)"
+    }
     
 }
